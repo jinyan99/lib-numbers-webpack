@@ -1,13 +1,16 @@
 {
-  "name": "lib-numbers-webpacl",
-  "version": "1.0.0",
+  "name": "lib-numbers-webpack",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/lib-numbers-webpack.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress"
+    "build:browser": "webpack --progress && cp dist/lib-numbers-webpack.js examples/browser",
+    "build:node": "webpack --progress && cp dist/lib-numbers-webpack.js examples/node/ && node examples/node/example.js"
   },
-  "keywords": ["webpack库"],
+  "keywords": [
+    "webpack库"
+  ],
   "author": "jinyan99",
   "license": "ISC",
   "devDependencies": {

@@ -7,7 +7,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'lib-numbers-webpack.js',
     library: 'libNumbersWebpack',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd', // amd, cmd, import都能引入
+    globalObject: 'this', // script链接，全局变量可直接使用
   },
   externals: { // 用这个选项避免将lodash打包到应用程序，而使用者会去加载它  
     lodash: {
